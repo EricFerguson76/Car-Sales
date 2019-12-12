@@ -42,9 +42,10 @@ export const initialState = {
                   state.additionalPrice - action.payload.price,
                 car: {
                   ...state.car,
-                  features: state.features.filter(feature => {
+                  features: state.car.features.filter(feature => {
                     return feature.id !== action.payload.id
                   })
+
                 },
                 additionalFeatures: [...state.additionalFeatures, action.payload]
               }
